@@ -49,7 +49,9 @@ void loop()
       tm.reset();
       tm.displayText("stop");
       tm.setLEDs(0xFF00);
-      delay(500000000000000000000);
+      delay(50000);
+      temps_restant = changer_temps();
+      
       }
     temps_restant--;
     tm.displayIntNum(temps_restant, true);
@@ -63,7 +65,8 @@ void loop()
     }
   tm.reset();
   tm.displayText("finish");
-  delay(5000000);
+  delay(50000);
+  temps_restant = changer_temps();
   
 
   
